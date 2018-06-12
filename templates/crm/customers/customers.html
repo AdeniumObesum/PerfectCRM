@@ -1,0 +1,30 @@
+{% extends 'crm/../../index.html' %}
+{% block content %}
+
+    <object width="200" height="150" data="http://cdn.abowman.com/widgets/hamster/hamster.swf?"
+            type="application/x-shockwave-flash" style="">
+        <param name="movie" value="http://cdn.abowman.com/widgets/hamster/hamster.swf?">
+        <param name="AllowScriptAccess" value="always">
+        <param name="wmode" value="opaque">
+    </object>
+
+    <div id="content"></div>
+
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+{#    $(document).ready(function(){#}
+{#        $("#content").load("http://www.caicai.com:8000/king_admin/crm/customer/")#}
+{#    })#}
+    $.ajax({
+            url:"/king_admin/crm/customer/",
+            type:"get",
+            success:function(response){
+                $("#content").html(response);
+            },
+            error:function() {
+            }
+        });
+
+    </script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load  tags %}
+{% block body %}
+    <div class="container" style="margin-left: 50px;margin-right: 50px;width: auto">
+        <div class="jumbotron">
+            <div class="row1">
+                <div class="panel panel-info">
+                    {% for app,tables in table_dic.items %}
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ app }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr></tr>
+                                </thead>
+                                <tbody>
+                                {% for table,admin in tables.items %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url "table_contents" app table %}">{% render_app_name admin %}=>{{ table }}</a>
+                                        </td>
+                                        <td><a href="">+ add</a></td>
+                                        <td><a href="{% url "table_contents" app table %}">~ change</a></td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    {% endfor %}
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

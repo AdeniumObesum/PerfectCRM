@@ -1,0 +1,1 @@
+from . import stu_tags

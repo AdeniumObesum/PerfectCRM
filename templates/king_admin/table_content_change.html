@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block css %}
+    <style type="text/css">
+        .tags-box {
+            height: 250px !important;
+            width: 100%;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    {% load tags %}
+
+    <form class="form-horizontal" method="post" onsubmit="return SelectAllChildren()">
+        {% csrf_token %}
+        <div class="form-group">
+            <span style="color: red">{{ form_obj.errors }}</span>
+        </div>
+
+        {% for field in form_obj %}
+            <div class="form-group">
+                <label class="col-sm-2 control-label" style="font-weight: inherit">
+                    {% if field.field.required %}
+                        <b>{{ field.label }}:</b>
+                    {% else %}
+
+                        {{ field.label }}:
+                    {% endif %}
+
+                </label>
+
+                <div class="col-sm-4">
+                    {% if  field.name  in  admin.filter_horizontal %}
+                        <div class="col-md-5">
+
+                            <select tag="chosen_list" class="tags-box" name="{{ field.name }}"
+                                    id="has_choosed_{{ field.name }}" multiple
+                                    {% if field.name in admin.readonly_fields and not conf.add_form %}disabled{% endif %}>
+                                {% select_has_choosed_box_option admin field conf.row_id form_obj %}
+                            </select>
+
+                        </div>
+                        <div class="col-md-1" style="line-height: 125px;text-align: center;">
+                            <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"
+                                  onclick="moveToRight('has_choosed_{{ field.name }}','not_choosed_{{ field.name }}')"></span>
+                            <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"
+                                  onclick="moveToLeft('not_choosed_{{ field.name }}','has_choosed_{{ field.name }}')"></span>
+
+                        </div>
+                        <div class="col-md-5">
+                            <select tag="not_chosen" class="tags-box" name="{{ field.name }}"
+                                    id="not_choosed_{{ field.name }}" multiple
+                                    {% if field.name in admin.readonly_fields and not conf.add_form %}disabled{% endif %}>
+                                {% select_not_choosed_box_option admin field conf.row_id form_obj %}
+                            </select>
+                        </div>
+                    {% else %}
+                        {{ field }} <span style="color: red">{{ field.errors.as_text }}</span>
+                        <span style="color: darkgrey;">{{field.help_text|safe }}</span>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% endfor %}
+            <div class="form-group">
+
+                <div class="col-sm-8">
+                    {% if conf.row_id %}
+                        <button type="button" class="btn btn-danger pull-left"><a
+                                href="{% url 'table_content_delete' conf.app conf.table conf.row_id %}">DELETE</a>
+                        </button>
+                    {% endif %}
+                    <button type="submit" class="btn btn-success pull-right">SAVE</button>
+                </div>
+            </div>
+    </form>
+    {% block add %}{% endblock %}
+    {% block js %}
+
+        <script>
+            $(function () {
+                moveToRight();
+                moveToLeft();
+            });
+
+
+            function moveToRight(left_id, right_id) {
+                var isSelected = $("#" + left_id + ">option:selected");
+                $(isSelected).appendTo($("#" + right_id));
+                {#                $("#" + left_id).removeChild(isSelected);#}
+            }
+
+            function moveToLeft(right_id, left_id) {
+                var isSelected = $("#" + right_id + ">option:selected");
+                $(isSelected).appendTo($("#" + left_id));
+                {#                $("#" + right_id).removeChild(isSelected);#}
+            }
+
+            function SelectAllChildren() {
+                //去掉所有的disabled属性
+                $("form").find("[disabled]").removeAttr("disabled");
+
+                $("select[tag='chosen_list'] option").each(function () {
+                    $(this).prop("selected", true)
+                });
+                $("select[tag='not_chosen'] option").each(function () {
+                    $(this).prop("selected", false)
+                });
+                return true;
+            }
+
+        </script>
+    {% endblock %}
+{% endblock %}

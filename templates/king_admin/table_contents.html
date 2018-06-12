@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% load tags %}
+
+
+    <div class="container" style="margin-left: 50px;margin-right: 50px;width: auto">
+        {#        <div class="jumbotron">#}
+        {##}
+        {##}
+        {#        </div><!-- /.jumbotron -->#}
+
+
+            <div class="row1">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{ conf.app }}>
+                            {% render_app_name admin %}({{ conf.table }})
+                            {% if not admin.readonly_table %}
+                                <a href="add/" class="pull-right">
+                                    <span class="label label-default">+ add</span>
+                                </a>
+                            {% endif %}
+                        </h3>
+
+                    </div>
+                    <div class="panel-body">
+
+                        <table class="table table-hover">
+                            <thead>
+
+                            <tr>
+                                {#                                <div class="row">#}
+
+                                <form class="" action="" method="get">
+                                    <div class="row">
+                                        {% for condition in admin.list_filter %}
+                                            <div class="col-lg-2">
+                                                {#                            <span class="glyphicon glyphicon-sort"></span>#}
+                                                <span class="text-capitalize"><em>{{ condition }}</em></span>
+                                                {% render_filter_ele condition admin filter_conditions %}
+                                            </div>
+
+                                        {% endfor %}
+                                        {% if admin.list_filter %}
+
+                                            <button type="SUBMIT" class="btn btn-success"
+                                                    style="margin-top: 20px">
+                                                检索({{ content_set.paginator.count }}条)
+                                            </button>
+                                        {% endif %}
+                                    </div>
+
+                                    <div class="row" style="margin-top: 20px">
+                                        {% if admin.search_field %}
+                                            <div class="col-lg-4">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control"
+                                                           placeholder="Search by {{ admin.search_field }}"
+                                                           name="_q" value="{{ conf.search_key }}">
+                                                    <span class="input-group-btn">
+                                                 <button class="btn btn-default" type="SUBMIT">
+                                                     <span class="glyphicon glyphicon-search"></span>
+                                                 </button>
+                                            </span><!-- 搜索内容，，，，，提交后台，get方式 -->
+                                                </div><!-- /input-group -->
+                                            </div><!-- /.col-lg-4 -->
+                                        {% endif %}
+                                    </div>
+                                </form>
+                                {#                                </div><!-- /.row-->#}
+                            </tr>
+                            <tr>
+                                <div>&nbsp;</div>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input tag="check_all_box" type="checkbox">
+                                </th>
+                                {% for column in admin.list_display %}
+                                    <th>
+                                        <a href="?{% get_url_append filter_conditions %}o={% handle_order_by column conf.order_by %}&page={{ content_set.number }}">{% get_column_verbose_name admin column %}</a>
+                                        {% if column in conf.order_by %}
+                                            {% if column != conf.order_by %}
+                                                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                                            {% endif %}
+                                        {% endif %}
+                                        {% if column == conf.order_by %}
+                                            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                        {% endif %}
+                                    </th>
+
+                                {% endfor %}
+                            </tr>
+
+                            </thead>
+                            <tbody>
+                            {#                            {% get_contents_all admin as content_set %}#}
+                            <form action="{% url 'checked_list_handle' conf.app conf.table %}" method="post"
+                                  id="form_objs" onsubmit="return SubmitChecked()">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="row"></div>
+                                        <select name="actions" id="actions" class="form-control">
+                                            <option value="">--------------</option>
+                                            <option value="delete_selected">
+                                                delete_selected {{ admin.table_name }}</option>
+                                            {% for action in admin.actions %}
+                                                <option value="{{ action }}">{% show_action_name admin action %}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <button class="btn" type="button"
+                                                onclick="document.getElementById('form_objs').submit()">
+                                            Go!
+                                        </button>
+                                    </div>
+                                </div>
+                                {% for obj in content_set %}
+                                    <tr>
+                                        <td>
+                                            <input name="checked_list" tag="check_box" type="checkbox"
+                                                   value="{{ obj.id }}">
+                                        </td>
+                                        {% contents_show obj admin %}
+                                    </tr>
+                                {% endfor %}
+                            </form>
+
+                            </tbody>
+                        </table>
+                        <nav>
+                            <ul class="pagination">
+                                {% if content_set.has_previous %}
+                                    <li class=""><a
+                                            href="?{% get_url_append filter_conditions %}page={{ content_set.previous_page_number }}&o={{ conf.old_order_by }}&_q={{ conf.search_key }}">上页</a>
+                                    </li>
+                                {% endif %}
+                                {% for loop_counter in content_set.paginator.page_range %}
+                                    {% render_page_ele loop_counter content_set filter_conditions conf %}
+                                {% endfor %}
+
+                                {% if content_set.has_next %}
+                                    <li class=""><a
+                                            href="?{% get_url_append filter_conditions %}page={{ content_set.next_page_number }}&o={{ conf.old_order_by }}&_q={{ conf.search_key }}">下页</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+        $(function () {
+            CheckAllToggle();
+        });
+
+        function CheckAllToggle() {
+            $("input[tag='check_all_box']").on('click', function () {
+                if ($(this).prop('checked')) {
+                    $("input[tag='check_box']").prop('checked', true);
+                }
+                else {
+                    $("input[tag='check_box']").prop('checked', false);
+                }
+            })
+        }
+
+        function SubmitChecked() {
+
+
+            var checked_list = [];
+            var act = $("#actions").find("option:selected").val();
+
+            $("input[tag='check_box']:checked").each(function () {
+                //console.log($(this).val());
+                checked_list.push($(this).val());
+            });
+            if (checked_list.length === 0) {
+                alert('No object got selected!');
+                return;
+            }
+            else if (!act) {
+                alert('No action got selected!');
+            }
+            else {
+                return true;
+            }
+        }
+
+    </script>
+
+{% endblock %}

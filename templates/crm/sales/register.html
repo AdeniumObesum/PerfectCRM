@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">么前途教育 | 与坑逼同行</h3>
+                </div>
+                {% if not status.status %}
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <span style="color: red">{{ customer_obj_form.errors }}</span>
+                        </div>
+                        <form action="" method="post" class="form-horizontal" onsubmit="return formCheck()">
+                            {% csrf_token %}
+                            {% for field in customer_obj_form %}
+                                <div class="form-group">
+                                    <div class="control-label col-sm-2"><b>{{ field.label }}</b></div>
+
+                                    <div class="col-sm-8">
+                                        {{ field }}
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+                            <hr>
+                            <div class="form-group">
+                                <div class="col-sm-6">所报班级: {{ enrollment_obj.cls.course }}</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">课程费用: {{ enrollment_obj.cls.course.price }}</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">开课日期: {{ enrollment_obj.cls.start_date }}</div>
+                            </div>
+                            <div class="form-group">
+                                <pre style="height: 450px">{{ enrollment_obj.cls.contract.template }}</pre>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6"><input type="checkbox" name="contract_agreed">我已阅读协议并接受所有条款</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-6">
+                                    <input type="submit" class="btn btn-default" value="提交" disabled>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                {% endif %}
+                {% if status.status %}
+                    <div class="panel-body"><span>报名成功！</span></div>
+                {% endif %}
+            </div>
+        </div>
+        {% if not status.status %}
+            <hr>
+            <p>请上传身份证正反面照片</p>
+            <div class="panel-body">
+                <form action="{{ request.path }}" id="filedropzone" class="dropzone" method="post">
+                    {% csrf_token %}
+                    <div class="dz-default dz-message">
+                        <div class="dz-icon icon-wrap icon-cicle icon-wrap-md">
+                            <i class="fa fa-cloud-upload fa-3x"></i>
+                        </div>
+                        <div>
+                            <p class="dz-text">把照片拖到这里</p>
+                            <p class="text-muted">需两张</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        {% endif %}
+
+    </div>
+
+
+{% endblock %}
+{% block js %}
+
+    <script>
+        $(function () {
+            buttonOk();
+        });
+
+        function buttonOk() {
+            var button_submit = $("form input[type='submit']");
+            var input_checkbox = $("form input[type='checkbox']");
+            input_checkbox.on('click', function () {
+                if (input_checkbox.prop('checked')) {
+                    button_submit.prop('disabled', false);
+                    button_submit.removeClass("btn-default");
+                    button_submit.addClass("btn-info");
+                }
+                else {
+                    button_submit.prop('disabled', true);
+                    button_submit.removeClass("btn-info");
+                    button_submit.addClass("btn-default");
+                }
+
+            });
+
+        }
+
+        function formCheck() {
+            if (myDropzone.files.length < 2) {
+                alert("至少上传两张图片");
+                return false
+            }
+            $("form").find("[disabled]").removeAttr("disabled");
+            if (!input_checkbox.prop('checked')) {
+                alert('请同意协议条款！');
+                return false
+            }
+            return true
+        }
+
+        $(document).ready(function () {
+            Dropzone.options.filedropzone = {
+                url: "{{ request.path }}",
+                paramName: "file", // The name that will be used to transfer the file
+                maxFilesize: 2, // MB,
+                addRemoveLinks: true,
+                maxFiles: 5,
+                uploadMultiple: true,
+                accept: function (file, done) {
+                    if (file.name === "justinbieber.jpg") {
+                        done("Naha, you don't.");
+                    }
+                    else {
+                        done();
+                    }
+                }
+            };
+            Dropzone.autoDiscover = false;
+            // or disable for specific dropzone:
+            // Dropzone.options.myDropzone = false;
+            myDropzone = new Dropzone("#filedropzone");
+            {#            myDropzone.on("addedfile", function (file) {#}
+            {#                /* Maybe display some more file information on your page */#}
+            {#                console.log(file)#}
+            {#            });#}
+            {#            myDropzone.on("maxfilesreached", function (file) {#}
+            {#                /* Maybe display some more file information on your page */#}
+            {#                console.log('filex ecxx')#}
+            {#            });#}
+            {#            myDropzone.on("success", function (file, response) {#}
+            {#                /* Maybe display some more file information on your page */#}
+            {#                console.log('filex upload done...', response);#}
+            {#                var response_dic = JSON.parse(response);#}
+            {#                if (response_dic.error) {#}
+            {#                    console.log("error happpend...")#}
+            {#                } else {#}
+            {#                    var eles = '';#}
+            {#                    $.each(response_dic.files, function (k, v) {#}
+            {#                        console.log(k + v);#}
+            {#                        var onclick_attr = 'onclick="DeleteFileOnServer(' + "'" + k + "',this)'";#}
+            {#                        eles += "<tr><td>" + k + "</td><td>" + v.size + "</td><td>" + v.ctime + "</td><td><i style='color:red;cursor: pointer' class='fa fa-times' aria-hidden='true' onclick='DeleteFileOnServer(\" " + k + " \",this)'></i></td></tr>";#}
+            {#                    });//end each#}
+            {#                    $("#uploaded-list tbody").html(eles);#}
+            {#                }#}
+            {#            });#}
+        });
+    </script>
+{% endblock %}

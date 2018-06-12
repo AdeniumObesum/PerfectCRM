@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% block content %}
+    <form class="form-horizontal" role="form" method="post">
+    {% csrf_token %}
+        <span style="color: red">{{ enrolement.errors }}</span>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">客户:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="name:{{ customer.name  }},QQ:{{ customer.qq }}" readonly>
+                </div>
+        </div>
+        {% for filed in enrolement %}
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">{{ filed.label }}:</label>
+                <div class="col-sm-4">
+                    {{ filed }}
+                </div>
+            </div>
+        {% endfor %}
+        <div class="form-group">
+            <div class="col-lg-4">
+                <ul class="pull-right">
+                    <li>
+                        {{ msgs.msg }}
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-lg-4">
+
+                <button type="submit" class="btn btn-info pull-right">next</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

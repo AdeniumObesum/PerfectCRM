@@ -1,0 +1,91 @@
+{% extends 'crm/../../index.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">学员基本信息审核</h3>
+                </div>
+                {% if not status.status %}
+                    <div class="panel-body">
+
+
+                        <ul style="color: red">
+                            {% for k,error in errors.items %}
+                            <li>{{ k }}:{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        <span><h3>缴费记录</h3></span>
+                        <form class="form-horizontal" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">客户</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" value="{{ enroll_obj.customer }}" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">所报课程</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" value="{{ enroll_obj.cls }}" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">缴纳金额</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" name="amount" value=""
+                                           placeholder="至少500">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">课程顾问</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" value="{{ enroll_obj.customer.consultant }}"
+                                           readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                            <div class="col-sm-8">
+                                <input type="submit" class="btn btn-info pull-right" value="提交">
+                            </div>
+                        </div>
+                        </form>
+
+
+                        {##}
+                        {#                        {% for field in payment_form %}#}
+                        {#                            <div class="form-group">#}
+                        {#                                <label class="col-lg-2 control-label">{{ field.label }}</label>#}
+                        {#                                <div class="col-sm-6">#}
+                        {#                                    {{ field }}#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        {% endfor %}#}
+
+
+
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block js %}
+
+    <script>
+        $(function () {
+
+        });
+
+
+        function formCheck() {
+            return true
+        }
+
+
+    </script>
+{% endblock %}
