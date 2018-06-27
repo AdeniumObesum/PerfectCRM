@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90d80173-1e71-4022-8892-af0fdef5049f" name="Default" comment="" />
+    <list default="true" id="90d80173-1e71-4022-8892-af0fdef5049f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PerfectCRM/settings.py" afterPath="$PROJECT_DIR$/PerfectCRM/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/views.py" afterPath="$PROJECT_DIR$/crm/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/crm/sales/contract_review.html" afterPath="$PROJECT_DIR$/templates/crm/sales/contract_review.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/crm/sales/payment.html" afterPath="$PROJECT_DIR$/templates/crm/sales/payment.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,33 +42,135 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="tags.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/king_admin/templatetags/tags.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PerfectCRM/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1491">
-              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/king_admin/utils.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crm/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="47" column="65" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="47" selection-end-column="65" />
+            <state relative-caret-position="202">
+              <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="king_admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/king_admin/king_admin.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crm/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+            <state relative-caret-position="209">
+              <caret line="114" column="34" lean-forward="false" selection-start-line="114" selection-start-column="34" selection-end-line="114" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contract_review.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/crm/sales/contract_review.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_students.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/crm/sales/my_students.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payment.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/crm/sales/payment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PerfectCRM/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crm/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="108" column="24" lean-forward="true" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+              <folding>
+                <element signature="e#801#1017#0" expanded="false" />
+                <element signature="e#1041#1084#0" expanded="false" />
+                <element signature="e#2035#2051#0" expanded="false" />
+                <element signature="e#2484#2694#0" expanded="false" />
+                <element signature="e#2900#2964#0" expanded="false" />
+                <element signature="e#2977#3011#0" expanded="false" />
+                <element signature="e#3538#3554#0" expanded="false" />
+                <element signature="e#3580#3636#0" expanded="false" />
+                <element signature="e#3681#4051#0" expanded="false" />
+                <element signature="e#3943#3959#0" expanded="false" />
+                <element signature="e#3985#4041#0" expanded="false" />
+                <element signature="e#4086#4325#0" expanded="false" />
+                <element signature="e#4221#4277#0" expanded="false" />
+                <element signature="e#4309#4325#0" expanded="false" />
+                <element signature="e#4356#5340#0" expanded="false" />
+                <element signature="e#4762#4851#0" expanded="false" />
+                <element signature="e#5128#5189#0" expanded="false" />
+                <element signature="e#5215#5330#0" expanded="false" />
+                <element signature="e#5379#6064#0" expanded="false" />
+                <element signature="e#5884#5926#0" expanded="false" />
+                <element signature="e#5952#6054#0" expanded="false" />
+                <element signature="e#6108#6354#0" expanded="false" />
+                <element signature="e#6246#6262#0" expanded="false" />
+                <element signature="e#6287#6345#0" expanded="false" />
+                <element signature="e#6390#6923#0" expanded="false" />
+                <element signature="e#6792#6837#0" expanded="false" />
+                <element signature="e#6863#6923#0" expanded="false" />
+                <element signature="e#6964#7693#0" expanded="false" />
+                <element signature="e#7520#7561#0" expanded="false" />
+                <element signature="e#7587#7693#0" expanded="false" />
+                <element signature="e#7740#8751#0" expanded="false" />
+                <element signature="e#7938#8006#0" expanded="false" />
+                <element signature="e#8124#8337#0" expanded="false" />
+                <element signature="e#8536#8602#0" expanded="false" />
+                <element signature="e#8627#8741#0" expanded="false" />
+                <element signature="e#8782#9166#0" expanded="false" />
+                <element signature="e#8857#8911#0" expanded="false" />
+                <element signature="e#9067#9083#0" expanded="false" />
+                <element signature="e#9110#9166#0" expanded="false" />
+                <element signature="e#9215#10108#0" expanded="false" />
+                <element signature="e#9309#9733#0" expanded="false" />
+                <element signature="e#9309#9415#1" expanded="false" />
+                <element signature="e#9798#10108#0" expanded="false" />
+                <element signature="e#9798#9909#1" expanded="false" />
+                <element signature="e#10169#11562#0" expanded="false" />
+                <element signature="e#10896#10912#0" expanded="false" />
+                <element signature="e#10962#11073#0" expanded="false" />
+                <element signature="e#11126#11255#0" expanded="false" />
+                <element signature="e#11303#11421#0" expanded="false" />
+                <element signature="e#11427#11447#0" expanded="false" />
+                <element signature="e#11506#11562#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,6 +212,9 @@
       <replace>condition</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -131,9 +241,7 @@
         <option value="$PROJECT_DIR$/statics/crm/plugins/dropzone/dropzone.js" />
         <option value="$PROJECT_DIR$/statics/crm/css/dropzone.css" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/crm/sales/contract_review.html" />
         <option value="$PROJECT_DIR$/crm/used_forms/own_forms.py" />
-        <option value="$PROJECT_DIR$/templates/crm/sales/payment.html" />
         <option value="$PROJECT_DIR$/king_admin/king_admin.py" />
         <option value="$PROJECT_DIR$/king_admin/views.py" />
         <option value="$PROJECT_DIR$/PerfectCRM/urls.py" />
@@ -143,7 +251,6 @@
         <option value="$PROJECT_DIR$/templates/perfect_crm/test.html" />
         <option value="$PROJECT_DIR$/crm/urls.py" />
         <option value="$PROJECT_DIR$/templates/students/students.html" />
-        <option value="$PROJECT_DIR$/crm/views.py" />
         <option value="$PROJECT_DIR$/PerfectCRM/views.py" />
         <option value="$PROJECT_DIR$/crm/admin.py" />
         <option value="$PROJECT_DIR$/crm/models.py" />
@@ -154,11 +261,14 @@
         <option value="$PROJECT_DIR$/templates/students/studyrecords.html" />
         <option value="$PROJECT_DIR$/student/urls.py" />
         <option value="$PROJECT_DIR$/templates/crm/sales/register.html" />
-        <option value="$PROJECT_DIR$/PerfectCRM/settings.py" />
         <option value="$PROJECT_DIR$/templates/king_admin/index.html" />
         <option value="$PROJECT_DIR$/student/views.py" />
         <option value="$PROJECT_DIR$/templates/students/homework_detail.html" />
         <option value="D:/python3/Lib/site-packages/django/db/backends/mysql/__init__.py" />
+        <option value="$PROJECT_DIR$/PerfectCRM/settings.py" />
+        <option value="$PROJECT_DIR$/crm/views.py" />
+        <option value="$PROJECT_DIR$/templates/crm/sales/contract_review.html" />
+        <option value="$PROJECT_DIR$/templates/crm/sales/payment.html" />
       </list>
     </option>
   </component>
@@ -168,12 +278,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-53" />
     <option name="y" value="19" />
     <option name="width" value="936" />
     <option name="height" value="731" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -189,29 +300,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="king_admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="king_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -228,6 +316,18 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,21 +443,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-53" y="19" width="936" height="731" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23515981" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23903178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28915662" sideWeight="0.45319635" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.052139036" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28895614" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5771812" sideWeight="0.54680365" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23519164" sideWeight="0.54680365" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2283105" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26929983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7483221" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21369103" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21331316" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -453,24 +552,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/crm/sales/contract_review.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="54" lean-forward="false" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crm/used_forms/own_forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/crm/sales/payment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -531,20 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/crm/sales/my_students.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
@@ -601,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PerfectCRM/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/students/mycourse.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
@@ -633,21 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PerfectCRM/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="80" column="52" lean-forward="false" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -694,62 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="326" column="0" lean-forward="false" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
-          <folding>
-            <element signature="e#801#1017#0" expanded="false" />
-            <element signature="e#1041#1084#0" expanded="false" />
-            <element signature="e#1794#1810#0" expanded="false" />
-            <element signature="e#1836#1896#0" expanded="false" />
-            <element signature="e#1938#2131#0" expanded="false" />
-            <element signature="e#2035#2051#0" expanded="false" />
-            <element signature="e#2077#2131#0" expanded="false" />
-            <element signature="e#2176#2974#0" expanded="false" />
-            <element signature="e#2484#2694#0" expanded="false" />
-            <element signature="e#2822#2874#0" expanded="false" />
-            <element signature="e#2900#2964#0" expanded="false" />
-            <element signature="e#2977#3011#0" expanded="false" />
-            <element signature="e#3386#3646#0" expanded="false" />
-            <element signature="e#3538#3554#0" expanded="false" />
-            <element signature="e#3580#3636#0" expanded="false" />
-            <element signature="e#3943#3959#0" expanded="false" />
-            <element signature="e#3985#4041#0" expanded="false" />
-            <element signature="e#4762#4851#0" expanded="false" />
-            <element signature="e#5128#5189#0" expanded="false" />
-            <element signature="e#5215#5330#0" expanded="false" />
-            <element signature="e#5884#5926#0" expanded="false" />
-            <element signature="e#5952#6054#0" expanded="false" />
-            <element signature="e#6108#6354#0" expanded="false" />
-            <element signature="e#6246#6262#0" expanded="false" />
-            <element signature="e#6287#6345#0" expanded="false" />
-            <element signature="e#6390#6923#0" expanded="false" />
-            <element signature="e#6792#6837#0" expanded="false" />
-            <element signature="e#6863#6923#0" expanded="false" />
-            <element signature="e#7520#7561#0" expanded="false" />
-            <element signature="e#7587#7693#0" expanded="false" />
-            <element signature="e#7938#8006#0" expanded="false" />
-            <element signature="e#8536#8602#0" expanded="false" />
-            <element signature="e#8627#8741#0" expanded="false" />
-            <element signature="e#8782#9166#0" expanded="false" />
-            <element signature="e#8857#8911#0" expanded="false" />
-            <element signature="e#9067#9083#0" expanded="false" />
-            <element signature="e#9110#9166#0" expanded="false" />
-            <element signature="e#9215#10108#0" expanded="false" />
-            <element signature="e#9309#9733#0" expanded="false" />
-            <element signature="e#9309#9415#1" expanded="false" />
-            <element signature="e#9798#10108#0" expanded="false" />
-            <element signature="e#9798#9909#1" expanded="false" />
-            <element signature="e#10896#10912#0" expanded="false" />
-            <element signature="e#10962#11073#0" expanded="false" />
-            <element signature="e#11126#11255#0" expanded="false" />
-            <element signature="e#11303#11421#0" expanded="false" />
-            <element signature="e#11427#11447#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/python3/Lib/site-packages/django/db/backends/mysql/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -765,9 +758,17 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/MySQLdb/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/king_admin/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/king_admin/templatetags/tags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
+        <state relative-caret-position="19">
           <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
@@ -781,11 +782,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/king_admin/utils.py">
+    <entry file="file://$PROJECT_DIR$/crm/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="47" column="65" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="47" selection-end-column="65" />
+        <state relative-caret-position="202">
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="114" column="34" lean-forward="false" selection-start-line="114" selection-start-column="34" selection-end-line="114" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/crm/sales/contract_review.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/crm/sales/my_students.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/crm/sales/payment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerfectCRM/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerfectCRM/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="108" column="24" lean-forward="true" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+          <folding>
+            <element signature="e#801#1017#0" expanded="false" />
+            <element signature="e#1041#1084#0" expanded="false" />
+            <element signature="e#2035#2051#0" expanded="false" />
+            <element signature="e#2484#2694#0" expanded="false" />
+            <element signature="e#2900#2964#0" expanded="false" />
+            <element signature="e#2977#3011#0" expanded="false" />
+            <element signature="e#3538#3554#0" expanded="false" />
+            <element signature="e#3580#3636#0" expanded="false" />
+            <element signature="e#3681#4051#0" expanded="false" />
+            <element signature="e#3943#3959#0" expanded="false" />
+            <element signature="e#3985#4041#0" expanded="false" />
+            <element signature="e#4086#4325#0" expanded="false" />
+            <element signature="e#4221#4277#0" expanded="false" />
+            <element signature="e#4309#4325#0" expanded="false" />
+            <element signature="e#4356#5340#0" expanded="false" />
+            <element signature="e#4762#4851#0" expanded="false" />
+            <element signature="e#5128#5189#0" expanded="false" />
+            <element signature="e#5215#5330#0" expanded="false" />
+            <element signature="e#5379#6064#0" expanded="false" />
+            <element signature="e#5884#5926#0" expanded="false" />
+            <element signature="e#5952#6054#0" expanded="false" />
+            <element signature="e#6108#6354#0" expanded="false" />
+            <element signature="e#6246#6262#0" expanded="false" />
+            <element signature="e#6287#6345#0" expanded="false" />
+            <element signature="e#6390#6923#0" expanded="false" />
+            <element signature="e#6792#6837#0" expanded="false" />
+            <element signature="e#6863#6923#0" expanded="false" />
+            <element signature="e#6964#7693#0" expanded="false" />
+            <element signature="e#7520#7561#0" expanded="false" />
+            <element signature="e#7587#7693#0" expanded="false" />
+            <element signature="e#7740#8751#0" expanded="false" />
+            <element signature="e#7938#8006#0" expanded="false" />
+            <element signature="e#8124#8337#0" expanded="false" />
+            <element signature="e#8536#8602#0" expanded="false" />
+            <element signature="e#8627#8741#0" expanded="false" />
+            <element signature="e#8782#9166#0" expanded="false" />
+            <element signature="e#8857#8911#0" expanded="false" />
+            <element signature="e#9067#9083#0" expanded="false" />
+            <element signature="e#9110#9166#0" expanded="false" />
+            <element signature="e#9215#10108#0" expanded="false" />
+            <element signature="e#9309#9733#0" expanded="false" />
+            <element signature="e#9309#9415#1" expanded="false" />
+            <element signature="e#9798#10108#0" expanded="false" />
+            <element signature="e#9798#9909#1" expanded="false" />
+            <element signature="e#10169#11562#0" expanded="false" />
+            <element signature="e#10896#10912#0" expanded="false" />
+            <element signature="e#10962#11073#0" expanded="false" />
+            <element signature="e#11126#11255#0" expanded="false" />
+            <element signature="e#11303#11421#0" expanded="false" />
+            <element signature="e#11427#11447#0" expanded="false" />
+            <element signature="e#11506#11562#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

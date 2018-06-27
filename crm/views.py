@@ -30,7 +30,7 @@ def enrollment(req, row_id):
         enrollment_form = own_forms.EnrollmentForm(req.POST)
         if enrollment_form.is_valid():
             msg = '''请将此链接发送给客户进行填写：
-                           http://www.caicai.com:8000/crm/register/{enrole_id}/{random_str}/
+                           127.0.0.1:8000/crm/register/{enrole_id}/{random_str}/
                            '''
 
             random_str = "".join(random.sample(string.ascii_lowercase + string.digits, 8))

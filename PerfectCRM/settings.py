@@ -24,7 +24,7 @@ SECRET_KEY = '*4ybt#^b+8w3z@wo$obsgk3^n%%842tg$cptfgxl@1d_)2^wvj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.caicai.com", ]
+ALLOWED_HOSTS = ["127.0.0.1",]
 
 # Application definition
 
